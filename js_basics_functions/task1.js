@@ -4,13 +4,13 @@ function calculateArea(width, height) {
 }
 
 // Expression
-const rectangleArea = function(width, height) {
+const calculateRectangleArea = function(width, height) {
     return width * height;
 }
 
 // Arrow
-const rectangleAreaArrow = (width, height) => width * height;
+const getRectangleArea = (width, height) => width * height;
 
 console.log("Result of function declaration is " + calculateArea(8,9));
-console.log("Result of function expression is " + rectangleArea(8,9));
-console.log("Result of arrow function is " + rectangleAreaArrow(8,9));
+console.log("Result of function expression is " + calculateRectangleArea(8,9));
+console.log("Result of arrow function is " + getRectangleArea(8,9));

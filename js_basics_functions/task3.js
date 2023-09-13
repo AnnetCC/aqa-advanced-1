@@ -1,10 +1,10 @@
-const recursion = num =>  {
+const countDown = num =>  {
 
     if (num <= 0) {
         return
     }
     console.log("num is " + num);
-    recursion(num - 1);
+    countDown(num - 1);
 }
 
-recursion(5);
+countDown(5);
