@@ -2,7 +2,7 @@ const numbers = [2, -5, 0, 7, -3, 0, 10, -8, null, NaN, ""];
 let positiveCount = 0, negativeCount = 0, zeroCount = 0;
 
 for (let index = 0; index < numbers.length; index++) {
-    let number = numbers[index];
+    const number = numbers[index];
     switch (true) {
         case number > 0:
             positiveCount++;
