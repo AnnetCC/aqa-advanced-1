@@ -1,16 +1,15 @@
 export class Book {
+    constructor(name, author, year) {
+        this._name = name;
+        this._author = author;
+        this._year = year;
+    }
 
     static getOldestBook(books) {
         if (books.length === 0) {
             return null
         }
         return [...books].sort((a, b) => a._year - b._year)[0];
-    }
-
-    constructor(name, author, year) {
-        this._name = name;
-        this._author = author;
-        this._year = year;
     }
 
     get name() {
@@ -26,15 +25,15 @@ export class Book {
     }
 
     set name(newName) {
-        this._name = typeof newName === "string" ? newName : this._name;
+        if (typeof newName === 'string') this._name = newName;
     }
 
     set author(newAuthor) {
-        this._author = typeof newAuthor === "string" ? newAuthor : this._author;
+        if (typeof newAuthor === 'string') this._author = newAuthor;
     }
 
     set year(newYear) {
-        this._year = typeof newYear === "number" && newYear <= new Date().getFullYear() && newYear > 0 ? newYear : this._year;
+        if (typeof newYear === "number" && newYear <= new Date().getFullYear() && newYear > 0) this._year = newYear;
     }
 
     printInfo() {

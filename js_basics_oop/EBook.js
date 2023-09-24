@@ -1,14 +1,13 @@
 import {Book} from "./Book.js";
 
 export class EBook extends Book {
-
-    static fromBook(book, format) {
-        return new EBook(book.name, book.author, book.year, format);
-    }
-
     constructor(name, author, year, format) {
         super(name, author, year);
         this._format = format;
+    }
+
+    static fromBook(book, format) {
+        return new EBook(book.name, book.author, book.year, format);
     }
 
     get format() {
@@ -16,7 +15,7 @@ export class EBook extends Book {
     }
 
     set format(newFormat) {
-        this._format = newFormat.match(/epub|pdf|fb2/) ? newFormat : this._format;
+        if (newFormat.match(/epub|pdf|fb2/)) this._format = newFormat;
     }
 
     printInfo() {
