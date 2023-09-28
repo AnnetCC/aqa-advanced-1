@@ -1,9 +1,9 @@
 import {TodoController} from "./TodoController.js";
 import {UserController} from "./UserController.js";
 
-const url = "https://jsonplaceholder.typicode.com";
-const user = new UserController(url);
-const todo = new TodoController(url);
+const baseURL = "https://jsonplaceholder.typicode.com";
+const user = new UserController(baseURL);
+const todo = new TodoController(baseURL);
 
 const userInfo = await user.getInfo(1);
 const todoInfo = await todo.getInfo(3);

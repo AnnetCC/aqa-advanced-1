@@ -1,5 +1,5 @@
-function printMessage(text, milliseconds) {
+function printWithDelay(text, milliseconds) {
     setTimeout(() => console.log(text), milliseconds);
 }
 
-printMessage("Success!", 1000);
+printWithDelay("Success!", 1000);

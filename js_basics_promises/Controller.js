@@ -1,15 +1,15 @@
 export class Controller {
-    constructor(url) {
-        this._url = url;
+    constructor(baseURL) {
+        this._baseURL = baseURL;
     }
 
-    get url() {
-        return this._url;
+    get baseURL() {
+        return this._baseURL;
     }
 
     async getInfo() {
         try {
-            const response = await fetch(this.url);
+            const response = await fetch(this.baseURL);
             return await response.text();
         } catch (error) {
             console.log(error.message);
