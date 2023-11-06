@@ -1,0 +1,12 @@
+{
+  "singleQuote": false,
+  "trailingComma": "none",
+  "semi": true,
+  "bracketSpacing": false,
+  "useTabs": false,
+  "quoteProps": "consistent",
+  "printWidth": 120,
+  "bracketSameLine": true,
+  "endOfLine": "crlf"
+}
+
